@@ -45,7 +45,7 @@ export default function About() {
             My expertise includes <span className="text-emerald-200 font-semibold">React</span>, <span className="text-blue-300 font-semibold">Java</span>, and full stack development. I enjoy solving complex problems, learning new technologies, and collaborating with creative teams to deliver exceptional digital experiences.
           </p>
           <a
-            href="src/public/Vivek_resume.pdf"
+            href="/Vivek_resume.pdf"
             download="Vivek_resume.pdf"
             target="_self"
             className="inline-block px-7 py-3 bg-gradient-to-r from-emerald-400 to-blue-500 text-white rounded-full font-semibold shadow hover:from-blue-500 hover:to-emerald-400 transition-all duration-200 hover:scale-105"
