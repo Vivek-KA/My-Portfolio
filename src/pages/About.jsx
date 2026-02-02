@@ -46,7 +46,8 @@ export default function About() {
           </p>
           <a
             href="src/public/Vivek_resume.pdf"
-            download
+            download="Vivek_resume.pdf"
+            target="_self"
             className="inline-block px-7 py-3 bg-gradient-to-r from-emerald-400 to-blue-500 text-white rounded-full font-semibold shadow hover:from-blue-500 hover:to-emerald-400 transition-all duration-200 hover:scale-105"
           >
             Download CV
