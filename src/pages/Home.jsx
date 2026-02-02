@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import bgDark from "../assets/bg-dark.jpg";
 
+
+
 export default function Home() {
   // Text + color together
   const roles = [
@@ -72,7 +74,7 @@ export default function Home() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="/Vivek_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
              className="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 text-black font-semibold hover:opacity-90 transition"
