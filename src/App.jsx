@@ -11,15 +11,22 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="scroll-smooth">
+    // ✅ CHANGE 1: flex + min-h-screen for proper layout
+    <div className="flex flex-col min-h-screen">
+      
       <Navbar />
-      <section id="home"><Home /></section>
-      <section id="about"><About /></section>
-      <section id="education"><Education /></section>
-      <section id="experience"><Experience /></section>
-      <section id="skills"><Skills /></section>
-      <section id="projects"><Projects /></section>
-      <section id="contact"><Contact /></section>
+
+      {/* ✅ CHANGE 2: main wrapper with flex-grow */}
+      <main className="flex-grow scroll-smooth">
+        <Home />
+        <About />
+        <Education />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+
       <Footer />
     </div>
   );

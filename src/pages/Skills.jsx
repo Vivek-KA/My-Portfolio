@@ -64,42 +64,52 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div
+    <section
       id="skills"
-      className="min-h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 py-20"
-      style={{
-        background: "black"
-      }}
+      className="
+        min-h-screen w-full flex flex-col items-center justify-center
+        px-4 sm:px-6 md:px-16 lg:px-24   /* ✅ CHANGED */
+        py-16 sm:py-20                  /* ✅ CHANGED */
+        bg-black
+      "
     >
-      <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-blue-400 to-violet-500 bg-clip-text text-transparent">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-emerald-300 via-blue-400 to-violet-500 bg-clip-text text-transparent">
         Skills
       </h2>
 
-      <p className="text-lg text-gray-300 mb-12 text-center max-w-2xl">
+      <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 sm:mb-12 text-center max-w-2xl">
         A collection of my technical skills and expertise honed through projects
         and hands-on experience
       </p>
 
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10">
         {skills.map((group) => (
           <div
             key={group.category}
-            className="rounded-3xl px-8 py-8 bg-white/10 border border-white/20 shadow-xl backdrop-blur-xl transition-transform duration-300 hover:scale-105"
+            className="
+              rounded-3xl
+              px-5 sm:px-8              /* ✅ CHANGED */
+              py-6 sm:py-8              /* ✅ CHANGED */
+              bg-white/10 border border-white/20
+              shadow-xl backdrop-blur-xl
+              transition-transform duration-300
+              hover:scale-105
+            "
           >
-            <h3 className="text-2xl font-bold text-white mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
               {group.category}
             </h3>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-4 sm:gap-6">
               {group.items.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center gap-2"
+                  className="flex flex-col items-center gap-1 sm:gap-2"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-black/30 border border-white/10 text-2xl transition-transform duration-200 hover:scale-110">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-black/30 border border-white/10 text-xl sm:text-2xl transition-transform duration-200 hover:scale-110">
                     {skill.icon}
                   </div>
-                  <span className="text-base text-gray-200 font-medium">
+                  <span className="text-sm sm:text-base text-gray-200 font-medium">
                     {skill.name}
                   </span>
                 </div>
@@ -108,6 +118,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
